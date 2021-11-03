@@ -47,8 +47,8 @@ textarea { padding: 12px; text-align: justify;
 
    <textarea id='legacy_text' onkeyup = "convert_to_unicode()" placeholder=";gk¡ ij —frnso esa fy[ksa" style="background-color0: #ffce4450;" contenteditable="true"></textarea>
   
-   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010()" onclick="enable_viram()" style="background-color0: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
-                                                                                                                                                      -  पूर्ण विराम के लिए  alt + .  का प्रयोग करें। " contenteditable="true"></textarea>
+   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010(), enable_viram()" onclick="enable_viram()" style="background-color0: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
+                                                                                                                         -  पूर्ण विराम के लिए  alt + .  का प्रयोग करें। " contenteditable="true"></textarea>
  </div>
 
  
@@ -103,14 +103,16 @@ textarea { padding: 12px; text-align: justify;
   background: #555;
 }
 
- .article { font-family: 'Glegoo', serif!important;
+ .article {
 	background-color:#fff;
 	text-align:center;
-  box-shadow:  0px 0px 900px #000;
+  box-shadow:  0px 0px 400px #233373;
 	width: 100%; margin: auto;
 	height: 500px;
 	display:block;
 }
+
+#article {  font-family: 'Glegoo', serif!important; }
 
 .section:hover{
 	visibility:visible!important;
@@ -212,7 +214,7 @@ article p { padding: 10px;}
 
 
 
-  <button onclick="viram()" id="viram" style="position: fixed; left: -999px; right: -999px; width: 0; height: 0; font-size: 0;"></button>
+  <button onclick="viram()" id="viram" style="position: fixed; left: -999px; right: -999px; width: 0; height: 0; font-size: 0;">kkkk</button>
 
   
 <script>
@@ -245,9 +247,9 @@ function viram(event) {
 		function viram() { 
 		var curos = document.querySelector("#unicode_text").selectionStart;
 		var viram = $("#unicode_text").val();
-		$("#unicode_text").val(viram.slice(0, curos) + "।" + viram.slice(curos));
-			  document.getElementById("viram").disabled = true;
-
+		$("#unicode_text").val(viram.slice(0, curos) + "। " + viram.slice(curos));
+		  document.getElementById("viram").disabled = true;
+                    $('#unicode_text').focus();
 			}
 </script>
 
