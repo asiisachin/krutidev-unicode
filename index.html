@@ -45,7 +45,7 @@ textarea { padding: 12px; text-align: justify;
 
    <textarea id='legacy_text' onkeyup = "convert_to_unicode()" placeholder=";gk¡ ij —frnso esa fy[ksa" style="background-color0: #ffce4450;" contenteditable="true"></textarea>
   
-   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010()" style="background-color0: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
+   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010()" onclick="enable_viram()" style="background-color0: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
                                                                                                                          -  पूर्ण विराम के लिए  alt + .  का प्रयोग करें। " contenteditable="true"></textarea>
  </div>
 
@@ -227,7 +227,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 	  document.querySelector(".mobile-text").style.display= "none";
 	}
   
-  
+	function enable_viram() {
+    document.getElementById("viram").disabled = false;
+	}
   
 document.getElementById("viram").accessKey = ".";
 
@@ -243,6 +245,8 @@ function viram(event) {
 		var curos = document.querySelector("#unicode_text").selectionStart;
 		var viram = $("#unicode_text").val();
 		$("#unicode_text").val(viram.slice(0, curos) + "।" + viram.slice(curos));
+			  document.getElementById("viram").disabled = true;
+
 			}
 </script>
 
