@@ -43,9 +43,9 @@ textarea { padding: 12px; text-align: justify;
       
 			<div class="textarea-container">
 
-   <textarea id='legacy_text' onkeyup = "convert_to_unicode()" placeholder=";gk¡ ij —frnso esa fy[ksa" style="background-color: #ffce4450;" contenteditable="true"></textarea>
+   <textarea id='legacy_text' onkeyup = "convert_to_unicode()" placeholder=";gk¡ ij —frnso esa fy[ksa" style="background-color0: #ffce4450;" contenteditable="true"></textarea>
   
-   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010()" style="background-color: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
+   <textarea id='unicode_text' onkeyup = "Convert_to_Kritidev_010()" style="background-color0: #1a73e850;"  placeholder="यहाँ पर यूनिकोड में लिखें।
                                                                                                                          -  पूर्ण विराम के लिए  alt + .  का प्रयोग करें। " contenteditable="true"></textarea>
  </div>
 
@@ -75,6 +75,8 @@ textarea { padding: 12px; text-align: justify;
 	padding-bottom:20px;
 	bottom:80px; 
 	z-index:100;
+        box-shadow: 2px 2px 3px #233373;
+
 }
 
 .section .article {
@@ -240,7 +242,7 @@ function viram(event) {
 		function viram() { 
 		var curos = document.querySelector("#unicode_text").selectionStart;
 		var viram = $("#unicode_text").val();
-		$("#unicode_text").val(viram.slice(0, curos) + "p" + viram.slice(curos));
+		$("#unicode_text").val(viram.slice(0, curos) + "।" + viram.slice(curos));
 			}
 </script>
 
