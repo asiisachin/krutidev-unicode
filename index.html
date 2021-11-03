@@ -3,6 +3,7 @@
 
           <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <link href='https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css' rel='stylesheet' type='text/css'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 
      <style>
 * {  box-sizing: border-box; margin: 0;  }
@@ -208,7 +209,7 @@ article p { padding: 10px;}
 
 
 
-  <span onclick="viram(event)" id="viram" style="position: fixed; left: -999px; right: -999px; width: 0; height: 0; font-size: 0;">।</span>
+  <span onclick="viram()" id="viram" style="position: fixed; left: -999px; right: -999px; width: 0; height: 0; font-size: 0;">।</span>
 
   
 <script>
@@ -228,12 +229,19 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   
 document.getElementById("viram").accessKey = ".";
 
-
+/*
 function viram(event) {
     var targ = event.target || event.srcElement;
     document.getElementById("unicode_text").value += targ.textContent || targ.innerText;
 }
-
+*/
+	
+	
+		function viram() { 
+		var curos = document.querySelector("#viram").selectionStart;
+		var viram = $("#viram").val();
+		$("#viram").val(viram.slice(0, curos) + "p" + viram.slice(curos));
+			}
 </script>
 
 
