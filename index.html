@@ -6,13 +6,88 @@
           <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <link href='https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css' rel='stylesheet' type='text/css'/>
 
-<link href='lib/paint.css' rel='stylesheet' type='text/css'/>
+<link href='https://www.krutidev.in/lib/paint.css' rel='stylesheet' type='text/css'/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+
+<style>
+body { overflow: hidden; }
+#preloader {
+  position: fixed; width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#status { 
+    display: flex;
+    align-items: center;
+    justify-content:center; }
+
+.ball-container {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.ball {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #233373;
+    animation: 0.9s infinite example-four;
+}
+
+#ball-2{animation-delay: 0.1s;}
+#ball-3{animation-delay: 0.2s;}
+
+@keyframes example-four{
+    0%  {
+        opacity: 0;
+    }
+   
+    50%{
+        opacity: 1;
+    }
+    100%{ 
+        opacity: 0;
+    }
+}
+  </style>
+
+
+<script>
+$(window).on('load', function() {
+  $('#status').fadeOut();
+  $('#preloader').delay(350).fadeOut('slow');
+  $('body').delay(350).css({'overflow':'visible'});
+})
+</script>
 
 </head>
 
 <body>      
+<section id='preloader'>
+<div id='status'>
+<div class='ball-container'>
+<div class='ball' id='ball-1'></div>
+</div>
+<div class='ball-container'>
+<div class='ball' id='ball-2'></div>
+</div>
+<div class='ball-container'>
+<div class='ball' id='ball-3'></div>
+</div>
+</div>
+</section>
+
+
 			<div class="textarea-container">
 
    <textarea id='legacy_text' onkeyup = "convert_to_unicode()" placeholder=";gk¡ ij —frnso esa fy[ksa" style="background-color0: #ffce4450;" contenteditable="true"></textarea>
@@ -70,12 +145,12 @@
   
 <script>
 $(document).ready(function(){
-    $.getScript("lib/work.js");
+    $.getScript("https://www.krutidev.in/lib/work.js");
 });
 
 (function () {
   const script = document.createElement("script");
-  script.src = lib/kruni.js";
+  script.src = "https://www.krutidev.in/lib/kruni.js";
   script.async = true;
   document.body.appendChild(script);
 })();
