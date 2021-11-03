@@ -1,0 +1,145 @@
+* {  box-sizing: border-box; margin: 0;  }
+
+         @font-face {
+    font-family: 'Kruti Dev 010';
+    src: url('https://asiisachin.github.io/fonts/lib/krutidev/KrutiDev010.woff2') format('woff2'),
+        url('https://asiisachin.github.io/fonts/lib/krutidev/KrutiDev010.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+#legacy_text {
+    font-family: 'Kruti Dev 010';  font-size: 30px; line-height: 1.1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+#unicode_text  {font-family: 'Baloo 2'; font-size: 20px!important; line-height: 1.69; }
+
+.textarea-container {
+   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+}
+
+textarea { padding: 12px; text-align: justify;
+  float: left; margin: 0;
+  width: 50%; height: 100%;  outline: none;
+  resize: none; 
+} 
+
+
+
+
+
+
+
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#233373;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:1000;
+}
+
+.section{ 
+	position:fixed;
+	left: 40px; right: 40px; 
+	padding-bottom:20px;
+	bottom:80px; 
+	z-index:100;
+
+}
+
+.section .article {
+	margin-bottom:10px;
+         overflow-x: hidden;
+                overflow-y: auto; 
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+ .article {
+	background-color:#fff;
+	text-align:center;
+  box-shadow:  0px 0px 400px #233373;
+	width: 100%; margin: auto;
+	height: 500px;
+	display:block;
+}
+
+#article {  font-family: 'Glegoo', serif!important; }
+
+.section:hover{
+	visibility:visible!important;
+	opacity:1!important;
+}
+
+
+a#menu-share + textarea {
+  background-color: yellow!important;
+}
+
+.my-float{
+	font-size:24px;
+	margin-top:18px;
+}
+
+a#menu-share + .section{
+  visibility: hidden;
+}
+
+a#menu-share:hover + .section{
+  visibility: visible;
+  animation: scale-in 0.5s;
+}
+
+
+a#menu-share i{
+	animation: rotate-in 0.5s;
+}
+
+a#menu-share:hover > i{
+	animation: rotate-out 0.5s;
+}
+
+
+
+@keyframes scale-in {
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1);opacity: 1;}
+} 
+
+@keyframes rotate-in {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotate-out {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+} 
+
+article h1 { border-bottom: 2px solid #233373; padding: 10px;}
+article p { padding: 10px;}
