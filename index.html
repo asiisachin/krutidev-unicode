@@ -3,6 +3,12 @@
 <link href='https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap' rel='stylesheet'/>
   <title>Krutidev <=> Unicode Converter</title>
 
+      <link rel="icon" href="icon/192x192.png" type="image/png" sizes="192x192" />
+      <link rel="icon" href="icon/256x256.png" type="image/png" sizes="256x256" />
+	<link rel="manifest" href="manifest.json" />
+
+    
+    
   <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <link href='https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css' rel='stylesheet' type='text/css'/>
 <link href='https://www.krutidev.in/lib/paint.css' rel='stylesheet' type='text/css'/>
@@ -29,6 +35,16 @@ $(document).ready(function(){
     $.getScript("lib/work.js");
     $.getScript("lib/kruni.js");
 });
+  
+ 	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load', function() {
+	    navigator.serviceWorker.register('sw.js').then(function(registration) {
+	      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+	    }, function(err) {
+	      console.log('ServiceWorker registration failed: ', err);
+	    });
+	  });
+	}
 </script>
 </body>
 </html>
