@@ -1,0 +1,26 @@
+{
+  "short_name": "krutidev.in",
+  "name": "Krutidev <=> Unicode Converter",
+  "icons": [
+    {
+      "src": "icon/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },    {
+      "src": "icon/256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icon/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://www.krutidev.in/",
+  "background_color": "#fff",
+  "display": "standalone",
+  "theme_color": "#233373",
+  "orientation": "portrait"
+
+}
